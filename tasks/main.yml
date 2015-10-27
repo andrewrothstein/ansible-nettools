@@ -1,0 +1,24 @@
+---
+- name: (Debian) url related packages...
+  when: ansible_os_family == "Debian"
+  apt: name={{ item }} state=latest
+  with_items:
+    - traceroute
+    - curl
+    - wget
+    - corkscrew
+
+- name: (RedHat) url related packages...
+  when: ansible_os_family == "RedHat"
+  yum: name={{ item }} state=latest
+  with_items:
+    - traceroute
+    - curl
+    - wget
+
+- name: (Fedora) corkscrew
+  when: ansible_distribution == "Fedora"
+  yum: name={{item}} state=latest
+    - corkscrew
+
+    
