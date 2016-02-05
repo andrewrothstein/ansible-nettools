@@ -1,18 +1,8 @@
 ---
-- name: (Debian) url related packages...
+- name: url related packages...
   when: ansible_os_family == "Debian"
-  apt: name={{ item }} state=latest
+  package: name={{ item }} state=present
   with_items:
     - traceroute
     - curl
     - wget
-
-- name: (RedHat) url related packages...
-  when: ansible_os_family == "RedHat"
-  yum: name={{ item }} state=latest
-  with_items:
-    - traceroute
-    - curl
-    - wget
-
-    
