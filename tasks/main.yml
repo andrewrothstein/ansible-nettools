@@ -15,4 +15,5 @@
 - name: bind utils
   when: ansible_os_family == 'RedHat'
   package: name={{item}} state=present
+  with_items:
     - 'bind-utils'
