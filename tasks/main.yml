@@ -1,8 +1,12 @@
 ---
 - name: url related packages...
-  when: ansible_os_family == "Debian"
-  package: name={{ item }} state=present
+  package: name={{item}} state=present
   with_items:
     - traceroute
     - curl
     - wget
+
+- name: bind utils
+  when: ansible_os_family == 'RedHat'
+  package: name={{item}} state=present
+    - 'bind-utils'
