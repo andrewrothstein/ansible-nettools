@@ -6,6 +6,12 @@
     - curl
     - wget
 
+- name: dns utils
+  when: ansible_os_family == 'Debian'
+  package: name={{item}} state=present
+  with_items:
+    - dnsutils
+    
 - name: bind utils
   when: ansible_os_family == 'RedHat'
   package: name={{item}} state=present
