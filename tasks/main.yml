@@ -1,19 +1,22 @@
 ---
+- name: resolve platform specific vars
+  include_vars: "{{item}}"
+  with_first_found:
+    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+    - "{{ansible_distribution}}.yml"
+    - "{{ansible_os_family}}.yml"
+
 - name: url related packages...
+  become: yes
+  become_user: root
   package: name={{item}} state=present
   with_items:
     - traceroute
     - curl
     - wget
 
-- name: dns utils
-  when: ansible_os_family == 'Debian'
+- name: addl platform specific packages
+  become: yes
+  become_user: root
   package: name={{item}} state=present
-  with_items:
-    - dnsutils
-    
-- name: bind utils
-  when: ansible_os_family == 'RedHat'
-  package: name={{item}} state=present
-  with_items:
-    - 'bind-utils'
+  with_items: '{{nettools_addl_pkgs}}'

@@ -1,0 +1,3 @@
+---
+nettools_addl_pkgs:
+  - bind-utils
