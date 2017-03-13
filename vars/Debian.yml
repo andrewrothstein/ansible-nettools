@@ -1,3 +1,5 @@
 ---
 nettools_addl_pkgs:
   - dnsutils
+  - traceroute
+  - iproute

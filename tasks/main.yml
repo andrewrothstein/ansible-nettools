@@ -10,10 +10,8 @@
   become: yes
   become_user: root
   with_items:
-    - traceroute
     - curl
     - wget
-    - iproute
     - '{{nettools_addl_pkgs | default([])}}'
   package:
     name: '{{item}}'
