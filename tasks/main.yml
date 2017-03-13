@@ -9,15 +9,12 @@
 - name: url related packages...
   become: yes
   become_user: root
-  package: name={{item}} state=present
   with_items:
     - traceroute
     - curl
     - wget
     - iproute
-
-- name: addl platform specific packages
-  become: yes
-  become_user: root
-  package: name={{item}} state=present
-  with_items: '{{nettools_addl_pkgs}}'
+    - '{{nettools_addl_pkgs | default([])}}'
+  package:
+    name: '{{item}}'
+    state: present
