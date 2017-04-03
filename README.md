@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-nettools.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-nettools)
 andrewrothstein.nettools
 ===========================
 
