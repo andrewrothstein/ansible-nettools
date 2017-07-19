@@ -1,8 +1,8 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-nettools.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-nettools)
 andrewrothstein.nettools
-===========================
+========================
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-nettools.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-nettools)
 
-A role for installing assorted network inspection command line tools
+Installs assorted network inspection command line tools.
 
 Requirements
 ------------
