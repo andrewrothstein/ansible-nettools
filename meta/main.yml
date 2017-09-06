@@ -23,7 +23,11 @@ galaxy_info:
     - name: Debian
       versions:
         - jessie
+        - stretch
     - name: Alpine
+      versions:
+        - all
+    - name: Archlinux
       versions:
         - all
 
@@ -31,4 +35,3 @@ galaxy_info:
     - network
 
 dependencies: []
-  

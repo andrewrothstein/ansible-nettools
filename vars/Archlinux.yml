@@ -1,0 +1,5 @@
+---
+nettools_addl_pkgs:
+  - bind-tools
+  - traceroute
+  - iproute2
