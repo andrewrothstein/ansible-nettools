@@ -40,4 +40,4 @@ dependencies:
   - role: andrewrothstein.curl
     version: v1.0.8
   - role: andrewrothstein.wget
-    version: V1.0.3
+    version: v1.0.3
