@@ -1,5 +1,5 @@
 ---
-nettools_addl_pkgs:
+nettools_os_pkgs:
   - dnsutils
   - traceroute
   - iproute

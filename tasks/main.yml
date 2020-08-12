@@ -1,18 +1,19 @@
 ---
+---
 - name: resolve platform specific vars
-  include_vars: "{{item}}"
+  include_vars: '{{ item }}'
   with_first_found:
-    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
-    - "{{ansible_distribution}}.yml"
-    - "{{ansible_os_family}}.yml"
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
 
-- name: url related packages...
+- name: networking tools os packages...
   become: yes
   become_user: root
-  with_items:
-    - curl
-    - wget
-    - '{{nettools_addl_pkgs | default([])}}'
   package:
-    name: '{{item}}'
+    name: '{{ nettools_os_pkgs }}'
     state: present
