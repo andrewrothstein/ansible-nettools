@@ -2,4 +2,3 @@
 nettools_os_pkgs:
   - bind-tools
   - tcptraceroute
-  - iproute2

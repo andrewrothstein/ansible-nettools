@@ -1,4 +1,3 @@
 ---
 nettools_os_pkgs:
   - net-dns/bind-tools
-  - sys-apps/iproute2

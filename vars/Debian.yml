@@ -2,4 +2,3 @@
 nettools_os_pkgs:
   - dnsutils
   - traceroute
-  - iproute2
