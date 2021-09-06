@@ -15,31 +15,25 @@ galaxy_info:
         - all
     - name: Debian
       versions:
+        - bullseye
         - buster
-        - stretch
     - name: EL
       versions:
-        - 7
         - 8
     - name: Fedora
       versions:
-        - 31
-        - 32
-    - name: Gentoo
-      versions:
-        - all
+        - 34
     - name: Ubuntu
       versions:
         - bionic
         - focal
-        - xenial
   galaxy_tags:
     - network
 
 dependencies:
   - role: andrewrothstein.curl
-    version: v1.0.8
+    version: v1.0.10
   - role: andrewrothstein.wget
-    version: v1.0.3
+    version: v1.0.4
   - role: andrewrothstein.iproute
-    version: v1.0.0
+    version: v1.0.1
