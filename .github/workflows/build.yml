@@ -28,7 +28,8 @@ jobs:
         - centos_8
         - debian_bullseye
         - debian_buster
-        - fedora_356- fedora_35
+        - fedora_35
+        - fedora_36
         - rockylinux_8
         - ubuntu_bionic
         - ubuntu_focal
