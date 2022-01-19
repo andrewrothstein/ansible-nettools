@@ -1,0 +1,7 @@
+---
+- name: andrewrothstein.curl
+  version: v1.0.12
+- name: andrewrothstein.wget
+  version: v1.0.5
+- name: andrewrothstein.iproute
+  version: v1.0.2

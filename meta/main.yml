@@ -22,7 +22,8 @@ galaxy_info:
         - 8
     - name: Fedora
       versions:
-        - 34
+        - 35
+        - 36
     - name: Ubuntu
       versions:
         - bionic
@@ -31,9 +32,6 @@ galaxy_info:
     - network
 
 dependencies:
-  - role: andrewrothstein.curl
-    version: v1.0.10
-  - role: andrewrothstein.wget
-    version: v1.0.4
-  - role: andrewrothstein.iproute
-    version: v1.0.1
+  - andrewrothstein.curl
+  - andrewrothstein.wget
+  - andrewrothstein.iproute

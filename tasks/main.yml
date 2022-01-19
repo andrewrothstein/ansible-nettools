@@ -11,7 +11,7 @@
         - '{{ role_path }}/vars'
 
 - name: networking tools os packages...
-  become: yes
+  become: true
   become_user: root
   package:
     name: '{{ nettools_os_pkgs }}'
