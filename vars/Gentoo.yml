@@ -1,3 +1,5 @@
 ---
 nettools_os_pkgs:
   - net-dns/bind-tools
+  - net-analyzer/traceroute
+  - net-analyzer/openbsd-netcat
