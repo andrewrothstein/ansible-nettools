@@ -3,3 +3,4 @@ nettools_os_pkgs:
   - bind-utils
   - traceroute
   - nc
+  - tcpdump

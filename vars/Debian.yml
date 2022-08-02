@@ -3,3 +3,4 @@ nettools_os_pkgs:
   - dnsutils
   - traceroute
   - netcat-openbsd
+  - tcpdump

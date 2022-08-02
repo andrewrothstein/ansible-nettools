@@ -3,3 +3,4 @@ nettools_os_pkgs:
   - bind-tools
   - traceroute
   - openbsd-netcat
+  - tcpdump
