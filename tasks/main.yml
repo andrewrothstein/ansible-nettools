@@ -1,4 +1,11 @@
 ---
+
+- include_role:
+    name: andrewrothstein.curl
+- include_role:
+    name: andrewrothstein.wget
+- include_role:
+    name: andrewrothstein.iproute
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:

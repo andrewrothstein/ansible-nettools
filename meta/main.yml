@@ -23,8 +23,8 @@ galaxy_info:
         - 9
     - name: Fedora
       versions:
-        - 35
         - 36
+        - 37
     - name: Ubuntu
       versions:
         - bionic
@@ -32,8 +32,3 @@ galaxy_info:
         - jammy
   galaxy_tags:
     - network
-
-dependencies:
-  - andrewrothstein.curl
-  - andrewrothstein.wget
-  - andrewrothstein.iproute
