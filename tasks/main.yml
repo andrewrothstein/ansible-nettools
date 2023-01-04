@@ -1,5 +1,4 @@
 ---
-
 - include_role:
     name: andrewrothstein.curl
 - include_role:
