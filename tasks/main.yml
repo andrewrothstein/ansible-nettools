@@ -1,12 +1,15 @@
 ---
-- include_role:
+- name: Installing andrewrothstein.curl
+  ansible.builtin.include_role:
     name: andrewrothstein.curl
-- include_role:
+- name: Installing andrewrothstein.wget
+  ansible.builtin.include_role:
     name: andrewrothstein.wget
-- include_role:
+- name: Installing andrewrothstein.iproute
+  ansible.builtin.include_role:
     name: andrewrothstein.iproute
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -16,9 +19,9 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: networking tools os packages...
+- name: Networking tools os packages...
   become: true
   become_user: root
-  package:
+  ansible.builtin.package:
     name: '{{ nettools_os_pkgs }}'
     state: present
